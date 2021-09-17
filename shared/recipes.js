@@ -1,0 +1,61 @@
+export const RECIPES = [
+  {
+    id: 0,
+    menu: "Menu 1",
+    image: "/assets/images/bootstrap-logo.png",
+    featured: false,
+    time: 30,
+    difficulty: "Low",
+    ingredients: "Apple",
+    foodType: "Vegan",
+    description:
+      "pqiuwl.dk 23985. kjdlkfjasdiudf dlkjseiwl alksdf dlkwo slkdflw dkjsdas. ;laksdjfow. dlkjsoeijfsldkjfaspj ldkjsodi kdjfasdoifwl dkfjsl jfweoijfslkd j dlkfajsdofji wlkejf  dfsj lakdjfpa ",
+  },
+  {
+    id: 1,
+    menu: "Menu 2",
+    image: "/assets/images/bootstrap-logo.png",
+    featured: false,
+    time: 45,
+    difficulty: "High",
+    ingredients: "Beef",
+    foodType: "Diabetic vegan",
+    description:
+      "wlek dkdjiwju2l dkjsn.ak dijkfjdk .dkjasfo dk jkdowkjd lk  oiwlskj.",
+  },
+  {
+    id: 2,
+    menu: "Menu 3",
+    image: "/assets/images/bootstrap-logo.png",
+    featured: false,
+    time: 55,
+    difficulty: "Medium",
+    ingredients: "Carrot",
+    foodType: "Gluten Free",
+    description: "easerasedf ldkja dkfjask kdjslkk dkowiend kjksji kdslkwl.",
+  },
+  {
+    id: 3,
+    menu: "Menu 4",
+    image: "/assets/images/bootstrap-logo.png",
+    featured: false,
+    time: 15,
+    difficulty: "Medium",
+    ingredients: "Root Beat",
+    foodType: "Vegan",
+    description:
+      "easerasedf easerasedf ldkja easerasedf ldkja dkfjask kdjslkk dkowiend kjksji kdslkwldkfjask kdjslkk dkowiend kjksji kdslkwlldkja dkfjask kdjslkk dkowiend kjksji kdslkwl.",
+  },
+  {
+    id: 4,
+    menu: "Menu 5",
+    image: "/assets/images/bootstrap-logo.png",
+    featured: false,
+    time: 15,
+    difficulty: "High",
+    ingredients: "Onion",
+    foodType: "Vegan, Gluten Free",
+    description:
+      "Hello this is Nathan Jeon and I am writing code for my project. ",
+  },
+];
