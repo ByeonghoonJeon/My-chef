@@ -8,6 +8,7 @@ export const RECIPES = [
     difficulty: "Low",
     ingredients: "Apple",
     foodType: "Vegan",
+    introduction: "Very easy and nice menu for a special day",
     description:
       "pqiuwl.dk 23985. kjdlkfjasdiudf dlkjseiwl alksdf dlkwo slkdflw dkjsdas. ;laksdjfow. dlkjsoeijfsldkjfaspj ldkjsodi kdjfasdoifwl dkfjsl jfweoijfslkd j dlkfajsdofji wlkejf  dfsj lakdjfpa ",
   },
@@ -20,6 +21,7 @@ export const RECIPES = [
     difficulty: "High",
     ingredients: "Beef",
     foodType: "Diabetic vegan",
+    introduction: "Very easy and nice menu for a special day",
     description:
       "wlek dkdjiwju2l dkjsn.ak dijkfjdk .dkjasfo dk jkdowkjd lk  oiwlskj.",
   },
@@ -32,6 +34,7 @@ export const RECIPES = [
     difficulty: "Medium",
     ingredients: "Carrot",
     foodType: "Gluten Free",
+    introduction: "Very easy and nice menu for a special day",
     description: "easerasedf ldkja dkfjask kdjslkk dkowiend kjksji kdslkwl.",
   },
   {
@@ -43,6 +46,7 @@ export const RECIPES = [
     difficulty: "Medium",
     ingredients: "Root Beat",
     foodType: "Vegan",
+    introduction: "Very easy and nice menu for a special day",
     description:
       "easerasedf easerasedf ldkja easerasedf ldkja dkfjask kdjslkk dkowiend kjksji kdslkwldkfjask kdjslkk dkowiend kjksji kdslkwlldkja dkfjask kdjslkk dkowiend kjksji kdslkwl.",
   },
@@ -55,6 +59,7 @@ export const RECIPES = [
     difficulty: "High",
     ingredients: "Onion",
     foodType: "Vegan, Gluten Free",
+    introduction: "Very easy and nice menu for a special day",
     description:
       "Hello this is Nathan Jeon and I am writing code for my project. ",
   },

@@ -1,35 +1,71 @@
 import React, { Component } from "react";
-import { View } from "react-native";
+import Home from "./HomeComponent";
 import Directory from "./DirectoryComponent";
 import RecipeInfo from "./RecipesComponent";
-import { RECIPES } from "../shared/recipes";
+import Constants from "expo-constants";
+import { View, Platform } from "react-native";
+import { createStackNavigator } from "react-navigation-stack";
+import { createDrawerNavigator } from "react-navigation-drawer";
+import { createAppContainer } from "react-navigation";
+
+const DirectoryNavigator = createStackNavigator(
+  {
+    Directory: { screen: Directory },
+    RecipeInfo: { screen: RecipeInfo },
+  },
+  {
+    initialRouteName: "Directory",
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: "#5637DD",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        color: "#fff",
+      },
+    },
+  }
+);
+
+const HomeNavigator = createStackNavigator(
+  {
+    Home: { screen: Home },
+  },
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: "#5637DD",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        color: "#fff",
+      },
+    },
+  }
+);
+
+const MainNavigator = createDrawerNavigator(
+  {
+    Home: { screen: HomeNavigator },
+    Directory: { screen: DirectoryNavigator },
+  },
+  {
+    drawerBackgroundColor: "#CEC8FF",
+  }
+);
+
+const AppNavigator = createAppContainer(MainNavigator);
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      recipes: RECIPES,
-      selectedRecipe: null,
-    };
-  }
-  onRecipeSelect(recipeId) {
-    this.setState({ selectedRecipe: recipeId });
-  }
-
   render() {
     return (
-      <View style={{ flex: 1 }}>
-        <Directory
-          recipes={this.state.recipes}
-          onPress={(recipeId) => this.onRecipeSelect(recipeId)}
-        />
-        <RecipeInfo
-          recipe={
-            this.state.recipes.filter(
-              (recipe) => recipe.id === this.state.selectedRecipe
-            )[0]
-          }
-        />
+      <View
+        style={{
+          flex: 1,
+          paddingTop: Platform.OS === "ios" ? 0 : Constants.statusBarHeight,
+        }}
+      >
+        <AppNavigator />
       </View>
     );
   }

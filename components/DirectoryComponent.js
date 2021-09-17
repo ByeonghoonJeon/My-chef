@@ -1,26 +1,41 @@
-import React from "react";
+import React, { Component } from "react";
 import { FlatList } from "react-native";
 import { ListItem } from "react-native-elements";
+import { RECIPES } from "../shared/recipes";
 
-function Directory(props) {
-  const renderDirectoryItem = ({ item }) => {
-    return (
-      <ListItem
-        title={item.menu}
-        subtitle={item.description}
-        onPress={() => props.onPress(item.id)}
-        leftAvatar={{ source: require("../assets/logo.png") }}
-      />
-    );
+class Directory extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      recipes: RECIPES,
+    };
+  }
+
+  static navigationOptions = {
+    title: "Directory",
   };
 
-  return (
-    <FlatList
-      data={props.recipes}
-      renderItem={renderDirectoryItem}
-      keyExtractor={(item) => item.id.toString()}
-    />
-  );
+  render() {
+    const { navigate } = this.props.navigation;
+    const renderDirectoryItem = ({ item }) => {
+      return (
+        <ListItem
+          title={item.menu}
+          subtitle={item.introduction}
+          onPress={() => navigate("RecipeInfo", { recipeId: item.id })}
+          leftAvatar={{ source: require("../assets/logo.png") }}
+        />
+      );
+    };
+
+    return (
+      <FlatList
+        data={this.state.recipes}
+        renderItem={renderDirectoryItem}
+        keyExtractor={(item) => item.id.toString()}
+      />
+    );
+  }
 }
 
 export default Directory;
