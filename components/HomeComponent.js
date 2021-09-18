@@ -1,16 +1,46 @@
 import React, { Component } from "react";
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
+import { Card } from "react-native-elements";
+import { RECIPES } from "../shared/recipes";
+import { PROMOTIONS } from "../shared/promotions";
+import { PARTNERS } from "../shared/partners";
+
+function RenderItem({ item }) {
+  if (item) {
+    return (
+      <Card featuredTitle={item.title} image={require("../assets/menu1.jpg")}>
+        <Text style={{ margin: 10 }}>{item.description}</Text>
+      </Card>
+    );
+  }
+  return <View />;
+}
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      recipes: RECIPES,
+      promotions: PROMOTIONS,
+      partners: PARTNERS,
+    };
+  }
+
   static navigationOptions = {
     title: "Home",
   };
 
   render() {
     return (
-      <View>
-        <Text>Home Component</Text>
-      </View>
+      <ScrollView>
+        <RenderItem item={this.state.recipes[this.state.recipes.length - 1]} />
+        <RenderItem
+          item={this.state.promotions[this.state.promotions.length - 1]}
+        />
+        <RenderItem
+          item={this.state.partners[this.state.promotions.length - 1]}
+        />
+      </ScrollView>
     );
   }
 }
