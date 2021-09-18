@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Home from "./HomeComponent";
 import Directory from "./DirectoryComponent";
+import About from "./AboutComponent";
+import Contact from "./ContactComponent";
 import RecipeInfo from "./RecipesComponent";
 import Constants from "expo-constants";
 import { View, Platform } from "react-native";
@@ -17,7 +19,7 @@ const DirectoryNavigator = createStackNavigator(
     initialRouteName: "Directory",
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: "#5637DD",
+        backgroundColor: "#A45D5D",
       },
       headerTintColor: "#fff",
       headerTitleStyle: {
@@ -34,7 +36,43 @@ const HomeNavigator = createStackNavigator(
   {
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: "#5637DD",
+        backgroundColor: "#4A403A",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        color: "#fff",
+      },
+    },
+  }
+);
+
+const AboutNavigator = createStackNavigator(
+  {
+    About: { screen: About },
+  },
+  {
+    initialRouteName: "About",
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: "#911F27",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        color: "#fff",
+      },
+    },
+  }
+);
+
+const ContactNavigator = createStackNavigator(
+  {
+    Contact: { screen: Contact },
+  },
+  {
+    initialRouteName: "Contact",
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: "#316B83",
       },
       headerTintColor: "#fff",
       headerTitleStyle: {
@@ -48,9 +86,11 @@ const MainNavigator = createDrawerNavigator(
   {
     Home: { screen: HomeNavigator },
     Directory: { screen: DirectoryNavigator },
+    About: { screen: AboutNavigator },
+    Contact: { screen: ContactNavigator },
   },
   {
-    drawerBackgroundColor: "#CEC8FF",
+    drawerBackgroundColor: "#F8F0DF",
   }
 );
 
