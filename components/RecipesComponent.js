@@ -3,23 +3,11 @@ import { Text, View } from "react-native";
 import { Card, Divider } from "react-native-elements";
 import { ScrollView } from "react-native-gesture-handler";
 import { RECIPES } from "../shared/recipes";
-import { ModernHeader } from "@freakycoder/react-native-header-view";
 
 function RenderRecipe({ recipe }) {
   if (recipe) {
     return (
       <ScrollView>
-        <ModernHeader
-          text="Profile"
-          rightIconType="Ionicons"
-          backgroundColor="#fdfdfd"
-          rightIconName="ios-settings"
-          rightIconColor={colors.light.primary}
-          leftIconComponent={your - icon - component}
-          rightIconComponent={your - icon - component}
-          leftIconOnPress={() => NavigationService.back()}
-        />
-
         <Card featuredTitle={recipe.menu} image={`../assets/menu1.jpg`}>
           <Text style={({ marginTop: 10 }, { marginLeft: 10 })}>
             Difficulty: {recipe.difficulty}

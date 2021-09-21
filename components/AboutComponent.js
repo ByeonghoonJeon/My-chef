@@ -16,7 +16,7 @@ class About extends Component {
         />
         <Text style={styles.imageText}>
           {"   "}
-          Create special dinner with{"  "} {"\n"} {"  "}chef Jin
+          Create a special dinner with{"  "} {"\n"} {"  "}chef Jin
         </Text>
         <Text style={styles.titleText}>About Chef Sarah Jin</Text>
       </ScrollView>
@@ -43,12 +43,12 @@ const styles = StyleSheet.create({
   imageText: {
     fontSize: 20,
     fontWeight: "bold",
-    color: "#911F27",
+    color: "white",
     position: "absolute",
     top: 180,
     marginLeft: 30,
     alignSelf: "flex-start",
-    backgroundColor: "white",
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
   },
   container: {
     justifyContent: "center",
