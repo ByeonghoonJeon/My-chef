@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Text, StyleSheet, Image } from "react-native";
-import { Card, Divider } from "react-native-elements";
+import { Text, StyleSheet, Image, View } from "react-native";
+import { Card } from "react-native-elements";
 import { ScrollView } from "react-native-gesture-handler";
-import FullWidthImage from "react-native-fullwidth-image";
 
 class About extends Component {
   static navigationOptions = {
@@ -11,13 +10,15 @@ class About extends Component {
   render() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
-        <FullWidthImageImage
+        <Image
           style={styles.image}
-          source={{ uri: "../assets/profile1.jpg" }}
-          ratio={1 / 1}
+          source={require("../assets/profile1.jpg")}
         />
-        <Divider />
-        <Text style={styles.baseText}>About Chef Sarah Jin</Text>
+        <Text style={styles.imageText}>
+          {"   "}
+          Create special dinner with{"  "} {"\n"} {"  "}chef Jin
+        </Text>
+        <Text style={styles.titleText}>About Chef Sarah Jin</Text>
       </ScrollView>
     );
   }
@@ -25,7 +26,6 @@ class About extends Component {
 
 const styles = StyleSheet.create({
   baseText: {
-    fontFamily: "Cochin",
     textAlign: "center",
   },
   titleText: {
@@ -34,6 +34,21 @@ const styles = StyleSheet.create({
   },
   image: {
     borderRadius: 10,
+    width: "95%",
+    height: 250,
+    marginTop: 10,
+    alignContent: "center",
+    position: "relative",
+  },
+  imageText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#911F27",
+    position: "absolute",
+    top: 180,
+    marginLeft: 30,
+    alignSelf: "flex-start",
+    backgroundColor: "white",
   },
   container: {
     justifyContent: "center",

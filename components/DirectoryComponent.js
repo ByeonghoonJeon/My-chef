@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { FlatList } from "react-native";
 import { ListItem } from "react-native-elements";
 import { RECIPES } from "../shared/recipes";
+import Recipes from "./RecipesComponent";
 
 class Directory extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class Directory extends Component {
         <ListItem
           title={item.menu}
           subtitle={item.introduction}
-          onPress={() => navigate("RecipeInfo", { recipeId: item.id })}
+          onPress={() => navigate("Recipes", { recipeId: item.id })}
           leftAvatar={{ source: require("../assets/logo.png") }}
         />
       );

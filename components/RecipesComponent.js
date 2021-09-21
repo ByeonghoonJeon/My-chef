@@ -1,31 +1,66 @@
-import React from "react";
+import React, { Component } from "react";
 import { Text, View } from "react-native";
 import { Card, Divider } from "react-native-elements";
+import { ScrollView } from "react-native-gesture-handler";
+import { RECIPES } from "../shared/recipes";
+import { ModernHeader } from "@freakycoder/react-native-header-view";
 
 function RenderRecipe({ recipe }) {
   if (recipe) {
     return (
-      <Card featuredTitle={recipe.menu} image={require("../assets/menu1.jpg")}>
-        <Text style={({ marginTop: 10 }, { marginLeft: 10 })}>
-          Difficulty: {recipe.difficulty}
-        </Text>
-        <Text style={({ marginBottom: 10 }, { marginLeft: 10 })}>
-          Time: {recipe.time} mins.
-        </Text>
-        <Text style={({ marginBottom: 10 }, { marginLeft: 10 })}>
-          Feature: {recipe.foodType}
-        </Text>
-        <Divider style={{ margin: 10 }} />
-        <Text style={({ marginTop: 10 }, { marginLeft: 10 })}>Description</Text>
-        <Text style={{ margin: 10 }}>{recipe.description}</Text>
-      </Card>
+      <ScrollView>
+        <ModernHeader
+          text="Profile"
+          rightIconType="Ionicons"
+          backgroundColor="#fdfdfd"
+          rightIconName="ios-settings"
+          rightIconColor={colors.light.primary}
+          leftIconComponent={your - icon - component}
+          rightIconComponent={your - icon - component}
+          leftIconOnPress={() => NavigationService.back()}
+        />
+
+        <Card featuredTitle={recipe.menu} image={`../assets/menu1.jpg`}>
+          <Text style={({ marginTop: 10 }, { marginLeft: 10 })}>
+            Difficulty: {recipe.difficulty}
+          </Text>
+          <Text style={({ marginBottom: 10 }, { marginLeft: 10 })}>
+            Time: {recipe.time} mins.
+          </Text>
+          <Text style={({ marginBottom: 10 }, { marginLeft: 10 })}>
+            Feature: {recipe.foodType}
+          </Text>
+          <Divider style={{ margin: 10 }} />
+          <Text style={({ marginTop: 10 }, { marginLeft: 10 })}>
+            Description
+          </Text>
+          <Text style={{ margin: 10 }}>{recipe.description}</Text>
+        </Card>
+      </ScrollView>
     );
   }
   return <View />;
 }
 
-function RecipeInfo(props) {
-  return <RenderRecipe recipe={props.recipe} />;
+class Recipes extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      recipes: RECIPES,
+    };
+  }
+
+  static navigationOptions = {
+    title: "Recipe Information",
+  };
+
+  render() {
+    const recipeId = this.props.navigation.getParam("recipeId");
+    const recipe = this.state.recipes.filter(
+      (recipe) => recipe.id === recipeId
+    )[0];
+    return <RenderRecipe recipe={recipe} />;
+  }
 }
 
-export default RecipeInfo;
+export default Recipes;

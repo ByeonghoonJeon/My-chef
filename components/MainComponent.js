@@ -3,8 +3,8 @@ import Home from "./HomeComponent";
 import Directory from "./DirectoryComponent";
 import About from "./AboutComponent";
 import Contact from "./ContactComponent";
-import RecipeInfo from "./RecipesComponent";
 import Constants from "expo-constants";
+import Recipes from "./RecipesComponent";
 import { View, Platform } from "react-native";
 import { createStackNavigator } from "react-navigation-stack";
 import { createDrawerNavigator } from "react-navigation-drawer";
@@ -13,7 +13,7 @@ import { createAppContainer } from "react-navigation";
 const DirectoryNavigator = createStackNavigator(
   {
     Directory: { screen: Directory },
-    RecipeInfo: { screen: RecipeInfo },
+    Recipes: { screen: Recipes },
   },
   {
     initialRouteName: "Directory",
@@ -82,12 +82,31 @@ const ContactNavigator = createStackNavigator(
   }
 );
 
+const RecipesNavigator = createStackNavigator(
+  {
+    Recipes: { screen: Recipes },
+  },
+  {
+    initialRouteName: "Recipes",
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: "#316B83",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        color: "#fff",
+      },
+    },
+  }
+);
+
 const MainNavigator = createDrawerNavigator(
   {
     Home: { screen: HomeNavigator },
     Directory: { screen: DirectoryNavigator },
     About: { screen: AboutNavigator },
     Contact: { screen: ContactNavigator },
+    Recipes: { screen: RecipesNavigator },
   },
   {
     drawerBackgroundColor: "#F8F0DF",
