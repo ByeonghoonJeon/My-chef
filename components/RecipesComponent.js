@@ -8,7 +8,7 @@ function RenderRecipe({ recipe }) {
   if (recipe) {
     return (
       <ScrollView>
-        <Card featuredTitle={recipe.menu} image={`../assets/menu1.jpg`}>
+        <Card featuredTitle={recipe.menu} image={recipe.image}>
           <Text style={({ marginTop: 10 }, { marginLeft: 10 })}>
             Difficulty: {recipe.difficulty}
           </Text>

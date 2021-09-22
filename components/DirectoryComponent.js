@@ -23,7 +23,7 @@ class Directory extends Component {
           title={item.menu}
           subtitle={item.introduction}
           onPress={() => navigate("Recipes", { recipeId: item.id })}
-          leftAvatar={{ source: require("../assets/logo.png") }}
+          leftAvatar={{ source: item.image }}
         />
       );
     };

@@ -1,9 +1,15 @@
+import menu1 from "../assets/menu1.jpg";
+import menu2 from "../assets/menu2.jpg";
+import menu3 from "../assets/menu3.jpg";
+import menu4 from "../assets/menu4.jpg";
+import menu5 from "../assets/menu5.jpg";
+
 export const RECIPES = [
   {
     id: 0,
     title: "Nice Dinner",
     menu: "Vegan Apple Steak",
-    image: "../assets/menu1.jpg",
+    image: menu1,
     featured: true,
     time: 30,
     difficulty: "Low",
@@ -17,7 +23,7 @@ export const RECIPES = [
     id: 1,
     title: "Nice Salad",
     menu: "Beef Steak Salad",
-    image: "../assets/menu2.jpg",
+    image: menu2,
     featured: true,
     time: 45,
     difficulty: "High",
@@ -31,7 +37,7 @@ export const RECIPES = [
     id: 2,
     title: "Nice Snack",
     menu: "Fried Carrot",
-    image: "../assets/menu3.jpg",
+    image: menu3,
     featured: true,
     time: 55,
     difficulty: "Medium",
@@ -45,7 +51,7 @@ export const RECIPES = [
     id: 3,
     title: "Gorgeous Dinner",
     menu: "Beat Yogurt Salad",
-    image: "../assets/menu4.jpg",
+    image: menu4,
     featured: true,
     time: 15,
     difficulty: "Medium",
@@ -59,7 +65,7 @@ export const RECIPES = [
     id: 4,
     title: "Pretty Challenging but Worth it!",
     menu: "Onion Steak with Crumbles",
-    image: "../assets/menu5.jpg",
+    image: menu5,
     featured: true,
     time: 15,
     difficulty: "High",
