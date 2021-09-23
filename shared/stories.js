@@ -1,6 +1,6 @@
 import story1 from "../assets/story1.jpg";
 
-export const STORIES = [
+export let STORIES = [
   {
     id: 0,
     title: "Bootstrap Outfitters",
@@ -37,4 +37,4 @@ export const STORIES = [
     description:
       "It was a wonderful Saturday. At the Tom's birthday, I introduced my brand new cuisine, wine shrimp burger steak. He noticed us he always craves shrimp and burgers.",
   },
-];
+].sort((a, b) => b.date > a.date);

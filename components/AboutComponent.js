@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Text, StyleSheet, Image, View } from "react-native";
-import { Card } from "react-native-elements";
+import { Text, StyleSheet, Image } from "react-native";
+import { Card, CardItem } from "react-native-elements";
 import { ScrollView } from "react-native-gesture-handler";
 
 class About extends Component {
@@ -12,13 +12,12 @@ class About extends Component {
       <ScrollView contentContainerStyle={styles.container}>
         <Image
           style={styles.image}
-          source={require("../assets/profile1.jpg")}
+          source={require("../assets/profile1.png")}
         />
-        <Text style={styles.imageText}>
-          {"   "}
-          Create a special dinner with{"  "} {"\n"} {"  "}chef Jin
-        </Text>
-        <Text style={styles.titleText}>About Chef Sarah Jin</Text>
+        <Card style={{ borderRadius: 50 }}>
+          <Text style={styles.titleText}>About Chef Sarah Jin</Text>
+          <Text style={styles.baseText}>Great</Text>
+        </Card>
       </ScrollView>
     );
   }
@@ -33,10 +32,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   image: {
-    borderRadius: 10,
-    width: "95%",
-    height: 250,
-    marginTop: 10,
+    height: 200,
+    aspectRatio: 0.9,
     alignContent: "center",
     position: "relative",
   },
@@ -53,6 +50,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     alignItems: "center",
+    padding: 10,
   },
 });
 
