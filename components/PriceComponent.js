@@ -12,21 +12,21 @@ class Pricing extends Component {
         <PricingCard
           color="#4f9deb"
           title="STANDARD"
-          price="$300"
+          price="$400"
           info={["4 Guests", "Basic Support", "All Core Features"]}
           button={{ title: "GET STARTED", icon: "flight-takeoff" }}
         />
         <PricingCard
           color="#4f9deb"
           title="DELUXE"
-          price="$600"
+          price="$700"
           info={["6 Guests", "Basic Support", "All Core Features"]}
           button={{ title: "GET STARTED", icon: "flight-takeoff" }}
         />
         <PricingCard
           color="#4f9deb"
           title="PREMIUM"
-          price="$,1200"
+          price="$1,300"
           info={["6 Guests", "Basic Support", "All Core Features"]}
           button={{ title: "GET STARTED", icon: "flight-takeoff" }}
         />

@@ -6,7 +6,7 @@ import Contact from "./ContactComponent";
 import Constants from "expo-constants";
 import Recipes from "./RecipesComponent";
 import Pricing from "./PriceComponent";
-
+import Stories from "./StoriesComponent";
 import { View, Platform } from "react-native";
 import { createStackNavigator } from "react-navigation-stack";
 import { createDrawerNavigator } from "react-navigation-drawer";
@@ -39,6 +39,7 @@ const HomeNavigator = createStackNavigator(
     Contact: { screen: Contact },
     Recipes: { screen: Recipes },
     Pricing: { screen: Pricing },
+    Stories: { screen: Stories },
   },
   {
     defaultNavigationOptions: {
@@ -125,6 +126,24 @@ const PricingNavigator = createStackNavigator(
   }
 );
 
+const StoriesNavigator = createStackNavigator(
+  {
+    Stories: { screen: Stories },
+  },
+  {
+    initialRouteName: "Stories",
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: "#0C4271",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        color: "#fff",
+      },
+    },
+  }
+);
+
 const MainNavigator = createDrawerNavigator(
   {
     Home: { screen: HomeNavigator },
@@ -132,6 +151,7 @@ const MainNavigator = createDrawerNavigator(
     About: { screen: AboutNavigator },
     Contact: { screen: ContactNavigator },
     Pricing: { screen: PricingNavigator },
+    Stories: { screen: StoriesNavigator },
   },
   {
     drawerBackgroundColor: "#F8F0DF",

@@ -1,8 +1,11 @@
-export const PARTNERS = [
+import story1 from "../assets/story1.jpg";
+
+export const STORIES = [
   {
     id: 0,
     title: "Bootstrap Outfitters",
-    image: "/assets/images/logo.png",
+    date: "2021-09-07",
+    image: story1,
     featured: true,
     description:
       "Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.",
@@ -10,7 +13,8 @@ export const PARTNERS = [
   {
     id: 1,
     title: "Git Out Expeditions",
-    image: "/assets/images/logo.png",
+    date: "2021-09-13",
+    image: story1,
     featured: true,
     description:
       "Join Git Out Expeditions to explore new horizons with a group of other adventurers!",
@@ -18,17 +22,19 @@ export const PARTNERS = [
   {
     id: 2,
     title: "Mongo Fly Shop",
-    image: "/assets/images/logo.png",
+    date: "2021-09-14",
+    image: story1,
     featured: true,
     description:
       "Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop.",
   },
   {
     id: 3,
-    title: "Node Outdoor Apparel",
-    image: "../assets/images/logo.png",
+    title: "Last Saturday, Birthday Party",
+    date: "2021-09-15",
+    image: story1,
     featured: true,
     description:
-      "From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered.",
+      "It was a wonderful Saturday. At the Tom's birthday, I introduced my brand new cuisine, wine shrimp burger steak. He noticed us he always craves shrimp and burgers.",
   },
 ];
