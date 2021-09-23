@@ -12,24 +12,10 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import { createAppContainer } from "react-navigation";
 
-const DirectoryNavigator = createStackNavigator(
-  {
-    Directory: { screen: Directory },
-    Recipes: { screen: Recipes },
-  },
-  {
-    initialRouteName: "Directory",
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: "#A45D5D",
-      },
-      headerTintColor: "#fff",
-      headerTitleStyle: {
-        color: "#fff",
-      },
-    },
-  }
-);
+const DirectoryNavigator = createStackNavigator({
+  Directory: { screen: Directory },
+  Recipes: { screen: Recipes },
+});
 
 const HomeNavigator = createStackNavigator(
   {
@@ -44,7 +30,7 @@ const HomeNavigator = createStackNavigator(
   {
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: "#4A403A",
+        backgroundColor: "#362222",
       },
       headerTintColor: "#fff",
       headerTitleStyle: {
@@ -54,95 +40,25 @@ const HomeNavigator = createStackNavigator(
   }
 );
 
-const AboutNavigator = createStackNavigator(
-  {
-    About: { screen: About },
-  },
-  {
-    initialRouteName: "About",
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: "#911F27",
-      },
-      headerTintColor: "#fff",
-      headerTitleStyle: {
-        color: "#fff",
-      },
-    },
-  }
-);
+const AboutNavigator = createStackNavigator({
+  About: { screen: About },
+});
 
-const ContactNavigator = createStackNavigator(
-  {
-    Contact: { screen: Contact },
-  },
-  {
-    initialRouteName: "Contact",
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: "#316B83",
-      },
-      headerTintColor: "#fff",
-      headerTitleStyle: {
-        color: "#fff",
-      },
-    },
-  }
-);
+const ContactNavigator = createStackNavigator({
+  Contact: { screen: Contact },
+});
 
-const RecipesNavigator = createStackNavigator(
-  {
-    Recipes: { screen: Recipes },
-  },
-  {
-    initialRouteName: "Recipes",
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: "#316B83",
-      },
-      headerTintColor: "#fff",
-      headerTitleStyle: {
-        color: "#fff",
-      },
-    },
-  }
-);
+const RecipesNavigator = createStackNavigator({
+  Recipes: { screen: Recipes },
+});
 
-const PricingNavigator = createStackNavigator(
-  {
-    Pricing: { screen: Pricing },
-  },
-  {
-    initialRouteName: "Pricing",
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: "#0C4271",
-      },
-      headerTintColor: "#fff",
-      headerTitleStyle: {
-        color: "#fff",
-      },
-    },
-  }
-);
+const PricingNavigator = createStackNavigator({
+  Pricing: { screen: Pricing },
+});
 
-const StoriesNavigator = createStackNavigator(
-  {
-    Stories: { screen: Stories },
-  },
-  {
-    initialRouteName: "Stories",
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: "#0C4271",
-      },
-      headerTintColor: "#fff",
-      headerTitleStyle: {
-        color: "#fff",
-      },
-    },
-  }
-);
+const StoriesNavigator = createStackNavigator({
+  Stories: { screen: Stories },
+});
 
 const MainNavigator = createDrawerNavigator(
   {
