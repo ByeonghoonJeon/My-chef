@@ -7,6 +7,7 @@ import Constants from "expo-constants";
 import Recipes from "./RecipesComponent";
 import Pricing from "./PriceComponent";
 import Stories from "./StoriesComponent";
+
 import { View, Platform } from "react-native";
 import { createStackNavigator } from "react-navigation-stack";
 import { createDrawerNavigator } from "react-navigation-drawer";

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Text, StyleSheet, Image } from "react-native";
-import { Card, CardItem } from "react-native-elements";
+import { Text, StyleSheet, Image, ImageBackground } from "react-native";
+import { Card, Divider } from "react-native-elements";
 import { ScrollView } from "react-native-gesture-handler";
 
 class About extends Component {
@@ -9,14 +9,26 @@ class About extends Component {
   };
   render() {
     return (
-      <ScrollView contentContainerStyle={styles.container}>
-        <Image
-          style={styles.image}
-          source={require("../assets/profile1.png")}
+      <ScrollView>
+        <ImageBackground
+          style={styles.backImage}
+          source={require("../assets/profileCardPhoto.jpg")}
         />
+        <Divider style={styles.divider} />
+
         <Card style={{ borderRadius: 50 }}>
-          <Text style={styles.titleText}>About Chef Sarah Jin</Text>
-          <Text style={styles.baseText}>Great</Text>
+          <Text style={styles.titleText}> {"  "}Cosy Taste</Text>
+          <Text style={styles.baseText}> {"   "}Have a meet chef Jin!</Text>
+
+          <Text>
+            {"    "}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </Text>
         </Card>
       </ScrollView>
     );
@@ -25,23 +37,37 @@ class About extends Component {
 
 const styles = StyleSheet.create({
   baseText: {
-    textAlign: "center",
+    color: "#8F4F4F",
+    fontWeight: "bold",
+    marginTop: 5,
+    marginBottom: 15,
   },
   titleText: {
     fontSize: 20,
     fontWeight: "bold",
+    backgroundColor: "#8F4F4F",
+    color: "white",
   },
   image: {
     height: 200,
     aspectRatio: 0.9,
     alignContent: "center",
-    position: "relative",
+  },
+  backImage: {
+    height: 200,
+    aspectRatio: 1.9,
+    alignContent: "center",
+    marginTop: 10,
+    marginLeft: "auto",
+    marginRight: "auto",
+    overflow: "hidden",
+    borderRadius: 15,
   },
   imageText: {
     fontSize: 20,
     fontWeight: "bold",
     color: "white",
-    position: "absolute",
+
     top: 180,
     marginLeft: 30,
     alignSelf: "flex-start",
@@ -51,6 +77,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 10,
+  },
+
+  divider: {
+    borderWidth: 0.5,
+    width: "80%",
+    marginTop: 15,
+    marginRight: "auto",
+    marginLeft: "auto",
+    borderColor: "#CDBBA7",
   },
 });
 
