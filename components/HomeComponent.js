@@ -28,7 +28,7 @@ class Home extends Component {
   }
 
   static navigationOptions = {
-    title: "Home",
+    title: "My Chef",
   };
 
   render() {

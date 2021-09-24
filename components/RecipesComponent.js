@@ -3,6 +3,7 @@ import { Text, View } from "react-native";
 import { Card, Divider } from "react-native-elements";
 import { ScrollView } from "react-native-gesture-handler";
 import { RECIPES } from "../shared/recipes";
+import * as Animatable from "react-native-animatable";
 
 function RenderRecipe({ recipe }) {
   if (recipe) {
@@ -47,7 +48,11 @@ class Recipes extends Component {
     const recipe = this.state.recipes.filter(
       (recipe) => recipe.id === recipeId
     )[0];
-    return <RenderRecipe recipe={recipe} />;
+    return (
+      <Animatable.View animation="fadeInRightBig" duration={1000}>
+        <RenderRecipe recipe={recipe} />
+      </Animatable.View>
+    );
   }
 }
 

@@ -11,28 +11,28 @@ class Pricing extends Component {
       <ScrollView>
         <Animatable.View animation="fadeInRightBig" duration={1000}>
           <PricingCard
-            color="#4f9deb"
+            color="#9E7777"
             title="STANDARD"
-            price="$400"
-            info={["4 Guests", "Basic Support", "All Core Features"]}
+            price="$440"
+            info={["4 Guests", "2 Main dishes", "3 Side Dishes"]}
             button={{ title: "GET STARTED", icon: "flight-takeoff" }}
           />
         </Animatable.View>
         <Animatable.View animation="fadeInRightBig" duration={2000}>
           <PricingCard
-            color="#4f9deb"
+            color="#79B4B7"
             title="DELUXE"
-            price="$700"
-            info={["6 Guests", "Basic Support", "All Core Features"]}
+            price="$770"
+            info={["6 Guests", "3 Main dishes", "5 Side Dishes"]}
             button={{ title: "GET STARTED", icon: "flight-takeoff" }}
           />
         </Animatable.View>
         <Animatable.View animation="fadeInRightBig" duration={3000}>
           <PricingCard
-            color="#4f9deb"
+            color="#B97A95"
             title="PREMIUM"
-            price="$1,300"
-            info={["6 Guests", "Basic Support", "All Core Features"]}
+            price="$1,320"
+            info={["8 Guests", "3 Main dishes", "5 Side Dishes"]}
             button={{ title: "GET STARTED", icon: "flight-takeoff" }}
           />
         </Animatable.View>

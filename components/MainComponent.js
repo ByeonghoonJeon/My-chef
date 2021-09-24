@@ -13,14 +13,9 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import { createAppContainer } from "react-navigation";
 
-const DirectoryNavigator = createStackNavigator({
-  SpecialRecipes: { screen: SpecialRecipes },
-  Recipes: { screen: Recipes },
-});
-
 const HomeNavigator = createStackNavigator(
   {
-    Home: { screen: Home },
+    MyChef: { screen: Home },
     SpecialRecipes: { screen: SpecialRecipes },
     Stories: { screen: Stories },
     About: { screen: About },
@@ -63,7 +58,7 @@ const StoriesNavigator = createStackNavigator({
 
 const MainNavigator = createDrawerNavigator(
   {
-    Home: { screen: HomeNavigator },
+    MyChef: { screen: HomeNavigator },
     SpecialRecipes: { screen: SpecialRecipes },
     Stories: { screen: StoriesNavigator },
     About: { screen: AboutNavigator },
