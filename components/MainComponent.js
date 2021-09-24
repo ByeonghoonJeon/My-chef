@@ -40,6 +40,10 @@ const AboutNavigator = createStackNavigator({
   About: { screen: About },
 });
 
+const SpecialRecipesNavigator = createStackNavigator({
+  SpecialRecipes: { screen: SpecialRecipes },
+});
+
 const ContactNavigator = createStackNavigator({
   Contact: { screen: Contact },
 });
@@ -59,7 +63,7 @@ const StoriesNavigator = createStackNavigator({
 const MainNavigator = createDrawerNavigator(
   {
     MyChef: { screen: HomeNavigator },
-    SpecialRecipes: { screen: SpecialRecipes },
+    SpecialRecipes: { screen: SpecialRecipesNavigator },
     Stories: { screen: StoriesNavigator },
     About: { screen: AboutNavigator },
     Contact: { screen: ContactNavigator },

@@ -3,7 +3,7 @@ import { FlatList } from "react-native";
 import { ListItem } from "react-native-elements";
 import { RECIPES } from "../shared/recipes";
 
-class Directory extends Component {
+class SpecialRecipes extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,4 +38,4 @@ class Directory extends Component {
   }
 }
 
-export default Directory;
+export default SpecialRecipes;
