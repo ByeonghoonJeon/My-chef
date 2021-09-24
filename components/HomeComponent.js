@@ -40,7 +40,7 @@ class Home extends Component {
         <RenderItem
           item={this.state.promotions[this.state.promotions.length - 1]}
         />
-        <RenderItem item={this.state.stories[this.state.stories.length - 1]} />
+        <RenderItem item={this.state.stories[0]} />
       </ScrollView>
     );
   }

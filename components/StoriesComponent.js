@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Text, View } from "react-native";
+import { Text, View, StyleSheet, Button } from "react-native";
 import { Card, Divider } from "react-native-elements";
 import { ScrollView } from "react-native-gesture-handler";
 import { STORIES } from "../shared/stories";
-import { FlatList } from "react-native";
+import { FlatList, List } from "react-native";
 
 class Stories extends Component {
   constructor(props) {
@@ -27,9 +27,7 @@ class Stories extends Component {
               Posted at {item.date}
             </Text>
             <Divider style={{ margin: 10 }} />
-            <Text style={({ marginTop: 10 }, { marginLeft: 10 })}>
-              Description
-            </Text>
+            <Text style={styles.bold}>Description</Text>
             <Text style={{ margin: 10 }}>{item.description}</Text>
           </Card>
         </ScrollView>
@@ -46,6 +44,14 @@ class Stories extends Component {
   }
 }
 
+const styles = StyleSheet.create({
+  bold: {
+    fontWeight: "bold",
+    color: "#362222",
+    marginTop: 10,
+    marginLeft: 10,
+  },
+});
 // export default Directory;
 
 // class Stories extends Component {
