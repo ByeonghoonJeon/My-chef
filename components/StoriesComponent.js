@@ -52,41 +52,5 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
 });
-// export default Directory;
-
-// class Stories extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       stories: STORIES,
-//     };
-//   }
-
-//   static navigationOptions = {
-//     title: "Our Stories",
-//   };
-
-//   render() {
-//     return (
-//       <ScrollView>
-//         <Card
-//           featuredTitle={this.state.stories[0].title}
-//           image={this.state.stories[0].image}
-//         >
-//           <Text style={({ marginBottom: 10 }, { marginLeft: 10 })}>
-//             Posted at {this.state.stories[0].date}
-//           </Text>
-//           <Divider style={{ margin: 10 }} />
-//           <Text style={({ marginTop: 10 }, { marginLeft: 10 })}>
-//             Description
-//           </Text>
-//           <Text style={{ margin: 10 }}>
-//             {this.state.stories[0].description}
-//           </Text>
-//         </Card>
-//       </ScrollView>
-//     );
-//   }
-// }
 
 export default Stories;

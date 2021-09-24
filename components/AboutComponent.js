@@ -9,6 +9,7 @@ import {
   faOm,
 } from "@fortawesome/free-solid-svg-icons";
 import { color } from "react-native-reanimated";
+import * as Animatable from "react-native-animatable";
 
 class About extends Component {
   static navigationOptions = {
@@ -17,47 +18,54 @@ class About extends Component {
   render() {
     return (
       <ScrollView>
-        <ImageBackground
-          style={styles.backImage}
-          source={require("../assets/profileCardPhoto.jpg")}
-        >
-          <Text style={styles.titleText}> {"  "}Cosy Taste</Text>
-        </ImageBackground>
+        <Animatable.View animation="fadeInRightBig" duration={2000}>
+          <ImageBackground
+            style={styles.backImage}
+            source={require("../assets/profileCardPhoto.jpg")}
+          >
+            <Text style={styles.titleText}> {"  "}Cosy Taste</Text>
+          </ImageBackground>
+        </Animatable.View>
 
         {/* <Divider style={styles.divider} /> */}
-
-        <Card>
-          <Text style={styles.baseText}> {"   "}Have a meet chef Jin!</Text>
-          <Image
-            style={styles.image}
-            source={require("../assets/profile1.png")}
-          />
-          <Divider style={styles.dividerBottomMargin} />
-          <Text style={{ textAlign: "center" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </Text>
-          <Divider style={styles.dividerBottomMargin} />
-          <Text style={{ textAlign: "center" }}>
-            <FontAwesomeIcon
-              icon={faStarAndCrescent}
-              size={20}
-              color={"#8F4F4F"}
+        <Animatable.View animation="fadeInRightBig" duration={3000}>
+          <Card>
+            <Text style={styles.baseText}> {"   "}Have a meet chef Jin!</Text>
+            <Image
+              style={styles.image}
+              source={require("../assets/profile1.png")}
             />
-            {"   "}
-            <FontAwesomeIcon icon={faStarOfDavid} size={20} color={"#8F4F4F"} />
-            {"   "}
-            <FontAwesomeIcon icon={faOm} size={20} color={"#8F4F4F"} />
-          </Text>
-          <Text style={{ textAlign: "center", color: "#8F4F4F" }}>
-            Religious menu available!
-          </Text>
-        </Card>
+            <Divider style={styles.dividerBottomMargin} />
+            <Text style={{ textAlign: "center" }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </Text>
+            <Divider style={styles.dividerBottomMargin} />
+            <Text style={{ textAlign: "center" }}>
+              <FontAwesomeIcon
+                icon={faStarAndCrescent}
+                size={20}
+                color={"#8F4F4F"}
+              />
+              {"   "}
+              <FontAwesomeIcon
+                icon={faStarOfDavid}
+                size={20}
+                color={"#8F4F4F"}
+              />
+              {"   "}
+              <FontAwesomeIcon icon={faOm} size={20} color={"#8F4F4F"} />
+            </Text>
+            <Text style={{ textAlign: "center", color: "#8F4F4F" }}>
+              Religious menu available!
+            </Text>
+          </Card>
+        </Animatable.View>
       </ScrollView>
     );
   }

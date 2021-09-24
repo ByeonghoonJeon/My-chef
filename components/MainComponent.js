@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Home from "./HomeComponent";
-import Directory from "./DirectoryComponent";
+import SpecialRecipes from "./DirectoryComponent";
 import About from "./AboutComponent";
 import Contact from "./ContactComponent";
 import Constants from "expo-constants";
@@ -14,19 +14,19 @@ import { createDrawerNavigator } from "react-navigation-drawer";
 import { createAppContainer } from "react-navigation";
 
 const DirectoryNavigator = createStackNavigator({
-  Directory: { screen: Directory },
+  SpecialRecipes: { screen: SpecialRecipes },
   Recipes: { screen: Recipes },
 });
 
 const HomeNavigator = createStackNavigator(
   {
     Home: { screen: Home },
-    About: { screen: About },
-    Directory: { screen: Directory },
-    Contact: { screen: Contact },
-    Recipes: { screen: Recipes },
-    Pricing: { screen: Pricing },
+    SpecialRecipes: { screen: SpecialRecipes },
     Stories: { screen: Stories },
+    About: { screen: About },
+    Recipes: { screen: Recipes },
+    Contact: { screen: Contact },
+    Pricing: { screen: Pricing },
   },
   {
     defaultNavigationOptions: {
@@ -64,11 +64,11 @@ const StoriesNavigator = createStackNavigator({
 const MainNavigator = createDrawerNavigator(
   {
     Home: { screen: HomeNavigator },
-    Directory: { screen: DirectoryNavigator },
+    SpecialRecipes: { screen: SpecialRecipes },
+    Stories: { screen: StoriesNavigator },
     About: { screen: AboutNavigator },
     Contact: { screen: ContactNavigator },
     Pricing: { screen: PricingNavigator },
-    Stories: { screen: StoriesNavigator },
   },
   {
     drawerBackgroundColor: "#F8F0DF",
